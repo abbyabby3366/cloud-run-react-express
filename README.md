@@ -18,6 +18,18 @@ npm run dev
 - **Frontend**: http://localhost:5173
 - **Backend**: http://localhost:8080
 
+## 🐳 Docker (Local Build)
+
+If you have Docker installed and want to build the image locally:
+```bash
+docker build -t cloud-run-app .
+```
+
+To run the container locally:
+```bash
+docker run -p 8080:8080 cloud-run-app
+```
+
 ---
 
 ## 🚀 Manual Deployment to Cloud Run

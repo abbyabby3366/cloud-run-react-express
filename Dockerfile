@@ -16,6 +16,7 @@ COPY --from=build-frontend /app/client/dist ./client/dist
 
 ENV NODE_ENV=production
 ENV PORT=8080
+ENV HOST=0.0.0.0
 EXPOSE 8080
 
 CMD ["node", "server/index.js"]
