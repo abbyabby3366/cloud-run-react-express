@@ -30,6 +30,22 @@ To run the container locally:
 docker run -p 8080:8080 cloud-run-app
 ```
 
+## 🔐 MongoDB & Environment Variables
+
+The project now uses MongoDB for a persistent counter. 
+
+1. **Local Setup**: I've created a `.env` file for you with your connection string.
+2. **Cloud Run Setup**: **NEVER** upload your `.env` file to Cloud Run. Instead, follow these steps in the Google Cloud Console:
+
+### How to add Env Vars to Cloud Run (Manual)
+1. Go to your **Cloud Run service**.
+2. Click **EDIT & DEPLOY NEW REVISION**.
+3. Scroll down to the **Variables & Secrets** tab.
+4. Click **ADD VARIABLE**:
+   - **Name**: `MONGODB_URI`
+   - **Value**: `mongodb+srv://...` (your full URI)
+5. Click **DEPLOY**.
+
 ---
 
 ## 🚀 Manual Deployment to Cloud Run

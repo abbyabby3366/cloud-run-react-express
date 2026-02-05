@@ -13,6 +13,8 @@
   "type": "commonjs",
   "dependencies": {
     "cors": "^2.8.6",
-    "express": "latest"
+    "dotenv": "^17.2.3",
+    "express": "latest",
+    "mongoose": "^9.1.6"
   }
 }
