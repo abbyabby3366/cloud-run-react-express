@@ -1,5 +1,5 @@
 # Stage 1: Build React frontend
-FROM node:18-slim AS build-frontend
+FROM node:22-slim AS build-frontend
 WORKDIR /app/client
 COPY client/package*.json ./
 RUN npm install
@@ -7,7 +7,7 @@ COPY client/ ./
 RUN npm run build
 
 # Stage 2: Production server
-FROM node:18-slim
+FROM node:22-slim
 WORKDIR /app
 COPY server/package*.json ./server/
 RUN cd server && npm install --production
@@ -20,3 +20,4 @@ ENV HOST=0.0.0.0
 EXPOSE 8080
 
 CMD ["node", "server/index.js"]
+
